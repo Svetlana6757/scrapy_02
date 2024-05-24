@@ -1,5 +1,12 @@
 import scrapy
+import csv
 
+# Настройки для экспорта в CSV
+FEED_FORMAT = "csv"
+FEED_URI = "divan_light.csv"
+
+# Настройки для порядка полей в CSV
+FEED_EXPORT_FIELDS = ["name", "price", "url"]
 
 class DivanlightparsSpider(scrapy.Spider):
     name = "divanlightpars"

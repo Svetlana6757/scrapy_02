@@ -13,6 +13,7 @@ SPIDER_MODULES = ["divanpars.spiders"]
 NEWSPIDER_MODULE = "divanpars.spiders"
 
 
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "divanpars (+http://www.yourdomain.com)"
 
@@ -91,3 +92,12 @@ ROBOTSTXT_OBEY = True
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+
+# Настройки для экспорта в CSV
+FEED_FORMAT = "csv"
+FEED_URI = "divan_light.csv"
+
+# Настройки для порядка полей в CSV
+FEED_EXPORT_FIELDS = ["name", "price", "url"]
+
